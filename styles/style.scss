@@ -1,4 +1,16 @@
 /* Basic */
+
+/* Possible primary colors */
+$primaryColor: #284b8e;
+// $primaryColor: #bfff00;
+// $primaryColor: #f0e130;
+// $primaryColor: #30d5c8;
+
+/* Possible fonts */
+$fancyFont: 'Calligraffitti', cursive;
+$normalFont: 'Montserrat', sans-serif;
+ 
+
 *{ 
     margin: 0; 
     padding: 0; 
@@ -8,12 +20,12 @@
 body{ 
     color: #000000;     
     text-align:center; 
-    font-family: Georgia, serif;
+    font-family: $normalFont;
 } 
 
 /* Custom classes */
 .fullNavHeight{
-    height: 325px;
+    height: 100%;
 }
 
 .toggle{
@@ -26,7 +38,7 @@ body{
 
 /* Mobile version */
 body{
-    
+        
     /* Navigation */
     nav{
         display: grid;
@@ -52,6 +64,7 @@ body{
         i:nth-child(n+3){
             background: rgba(255, 255, 255, 0.1);
             padding: 15px 0;
+            font-size: 1.5em;
         }
 
         a{
@@ -67,7 +80,7 @@ body{
 
     /* Landing section */
     #landing{
-        background: url("../img/landing_min.jpg");
+        background: url("../img/landingWallpaper/landing_min.jpg");
         background-position: 50% 80%;
         background-repeat: no-repeat;
         height: 60vh;
@@ -78,18 +91,17 @@ body{
             display: grid;
             grid-template-rows: 50px 25px;
             row-gap: 30px;
+            font-family: $fancyFont;
 
             h1{
                 font-size: 3.5em;
                 font-weight: 700;
-                color: #442da1;
-                font-family: 'Calligraffitti', cursive;
+                color: $primaryColor;
             }
 
             h2{
                 font-size: 1.5em;
                 font-weight: unset;
-                font-family: 'Calligraffitti', cursive;
             }
         }
     }
@@ -97,7 +109,7 @@ body{
     /* About section */
     #about{
 
-        margin-bottom: 75px;
+        margin: 25px auto 100px auto;
 
         img{
             margin-top: 50px;
@@ -108,13 +120,11 @@ body{
         h2{
             font-size: 3em;
             font-weight: 700;
-            color: #442da1;
-            font-family: Georgia, serif;
+            color: $primaryColor;
             margin-top: 20px;
         }
 
         h3{
-            font-family: Georgia, serif;
             font-weight: normal;
             font-size: 1em;
             width: 80%;
@@ -123,27 +133,31 @@ body{
         }
     }
 
-    /* Horizontal line */
-
-    .hor-line{
-        border-bottom: 1px solid #000;
+    /* Horizontal line top */
+    .hor-line-top{
+        border-top: 1px solid #f6f6f6;
+        margin-bottom: -50px;
         transform: rotate(8deg);
+        background: #f6f6f6; 
+        height: 75px;
+        margin-left: -10px;
     }
 
     /* Projects section */
-
     #projects{
+
+        display: grid;
+        background: #f6f6f6; 
 
         h2{
             font-size: 2.5em;
             font-weight: 700;
-            color: #442da1;
-            font-family: Georgia, serif;
+            color: $primaryColor;
             margin-top: 50px;
         }
 
         .line{
-            border-top: 4px solid #442da1;
+            border-top: 4px solid $primaryColor;
             border-radius: 25px;
             width: 100px;
             margin: 0 auto;
@@ -151,6 +165,10 @@ body{
         }
 
         #projectGrid{
+
+            max-width: 80%;
+            margin: 0 auto;
+            margin-bottom: 100px;
 
             .project{
 
@@ -169,10 +187,19 @@ body{
 
                 h3{
                     grid-column: 1/3;
+                    font-size: 1.6em;
                 }
 
                 a{
-                    
+                    text-decoration: none;
+                    font-weight: 700;
+                    border: 1px solid $primaryColor;
+                    border-radius: 25px;
+                    padding: 5px 25px;
+                }
+
+                a:hover{
+                    cursor: crosshair;
                 }
 
                 a:nth-of-type(1){
@@ -186,9 +213,123 @@ body{
                 p{
                     grid-column: 1/3;
                 }
-                
-            }
-            
+
+                .disabled{
+                    opacity: 0.25;
+                }
+            }       
+        }
+    }
+
+    /* Horizontal line bottom */
+    .hor-line-bot{
+        border-bottom: 1px solid#f6f6f6;
+        transform: rotate(8deg);
+        background: #f6f6f6; 
+        height: 50px;
+        margin: -25px -20px 75px auto;
+    }
+
+    /* About detailed section */
+    #aboutDetail{
+       
+        margin-bottom: 75px;
+
+        h2{
+            font-size: 2.2em;
+            font-weight: 700;
+            color: $primaryColor;
+            margin-top: 50px;
+        }
+
+        .line{
+            border-top: 4px solid $primaryColor;
+            border-radius: 25px;
+            width: 100px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        p{
+            max-width: 80%;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        p:last-of-type{
+            margin-bottom: 35px;
+        }
+
+        span{
+            font-weight: 700;
+            color: $primaryColor;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 900;
+            border-radius: 35px;
+            padding: 15px 50px;
+            background: $primaryColor;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+
+    /* Horizontal line special */
+    .hor-line-spec{
+        border-top: 1px solid #f6f6f6;
+        transform: rotate(8deg);
+        background: #1A1A1A; 
+        height: 50px;
+        margin-left: -10px;
+        margin-bottom: -25px;
+    }
+
+    /* Contact */
+    #contact{
+        background: #1A1A1A;
+        padding-top: 50px;
+        padding: 50px 0;
+
+        h2{
+            width: 80%;
+            margin: 0 auto;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 50px;
+        }
+
+        a{
+            font-size: 1.5em;
+            color: #fff;
+            font-weight: normal;
+            text-decoration: none;
+            border: 1px solid $primaryColor;
+            background: $primaryColor;
+            border-radius: 35px;
+            padding: 10px 25px;
+        }
+
+        i{
+            margin-top: 50px;
+            font-size: 2em;
+            color: #fff;
+            padding: 0 10px;
+        }
+    }
+
+    /* Footer */
+
+    footer{
+        background: #000;
+        color: #fff;
+
+        p{
+            padding: 35px 0;
         }
     }
 
