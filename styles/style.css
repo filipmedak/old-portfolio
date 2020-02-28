@@ -1,6 +1,6 @@
 /* Basic */
-/* Possible primary colors */
-/* Possible fonts */
+/* Primary colors */
+/* Fonts */
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +13,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   max-width: 100%;
   overflow-x: hidden;
@@ -20,7 +24,7 @@ body, html {
 
 /* Custom classes */
 .fullNavHeight {
-  height: 100%;
+  height: 291px;
 }
 
 .toggle {
@@ -34,6 +38,11 @@ body, html {
 
 .d-none {
   display: none;
+}
+
+#CV_lang {
+  background: red;
+  pointer-events: none;
 }
 
 /* Mobile version */
@@ -55,25 +64,33 @@ body nav {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 64px;
+      grid-template-rows: 64px;
   color: #fff;
   background: #000;
-  height: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 99999;
+  z-index: 11000;
+  /**/
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 body nav :first-child {
-  -ms-grid-column: 1;
-  grid-column: 1;
   padding: 15px 0;
+}
+
+body nav .logoMain {
+  letter-spacing: -6px;
+  font-family: "Odibee Sans";
+  font-size: 2.25em;
 }
 
 body nav :nth-child(2) {
   -ms-grid-column: 4;
   grid-column: 4;
-  padding: 15px 0;
   font-size: 1.5em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -84,17 +101,7 @@ body nav i {
   font-size: 2em;
 }
 
-body nav i:nth-child(n+3) {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px 0;
-  font-size: 1.5em;
-}
-
-body nav i:nth-child(n+3):hover {
-  color: #284b8e;
-}
-
-body nav a {
+body nav a:nth-child(-n+5) {
   text-decoration: none;
   color: #fff;
   -ms-grid-column: 1;
@@ -106,8 +113,56 @@ body nav a {
   background: rgba(255, 255, 255, 0.1);
 }
 
-body nav a:last-of-type {
+body nav a:nth-child(n+6) {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body nav a:nth-child(n+6) :hover {
+  color: #284b8e;
+}
+
+body nav a {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body nav a:hover {
+  color: #284b8e;
+  font-weight: 700;
+}
+
+body nav .dropdown {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+body nav .dropdown i {
+  overflow: hidden;
+}
+
+body nav .dropdown .dropdownContent {
+  display: -ms-grid;
+  display: grid;
+  background: #1A1A1A;
+  color: #fff;
   display: none;
+  position: absolute;
+  margin-left: -70px;
+}
+
+body nav .dropdown .dropdownContent a {
+  font-size: 1em;
+  padding: 10px 30px;
+  margin: 0;
+  background: transparent;
 }
 
 body #landing {
@@ -127,18 +182,18 @@ body #landing div {
   display: grid;
   -ms-grid-rows: 50px 25px;
       grid-template-rows: 50px 25px;
-  row-gap: 30px;
+  row-gap: 50px;
   font-family: "Calligraffitti", cursive;
 }
 
 body #landing div h1 {
-  font-size: 3.5em;
+  font-size: 4.25em;
   font-weight: 700;
   color: #284b8e;
 }
 
 body #landing div h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: unset;
 }
 
@@ -161,7 +216,7 @@ body #about h2 {
 
 body #about h3 {
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1.25em;
   width: 80%;
   margin: 0 auto;
   margin-top: 15px;
@@ -202,11 +257,23 @@ body #projects .line {
 body #projects #projectGrid {
   display: -ms-grid;
   display: grid;
-  max-width: 80%;
   margin: 0 auto;
   margin-bottom: 100px;
   z-index: 10000;
   position: relative;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+body #projects #projectGrid .project:hover {
+  border: 2px solid #284b8e;
+  border-radius: 35px;
+  -webkit-box-shadow: 10px 5px 5px grey;
+          box-shadow: 10px 5px 5px grey;
+}
+
+body #projects #projectGrid .project:hover h3 {
+  color: #284b8e;
 }
 
 body #projects #projectGrid .project {
@@ -217,11 +284,19 @@ body #projects #projectGrid .project {
       grid-template-columns: 1fr 1fr;
   -webkit-column-gap: 30px;
           column-gap: 30px;
-  row-gap: 10px;
+  row-gap: 20px;
+  border: 2px solid transparent;
+  padding: 30px 0;
+  max-width: 350px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 2px solid transparent;
+  border-radius: 35px;
 }
 
 body #projects #projectGrid .project img {
-  width: 300px;
+  width: 90%;
+  max-width: 350px;
   height: auto;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -246,7 +321,7 @@ body #projects #projectGrid .project a {
 }
 
 body #projects #projectGrid .project a:hover {
-  cursor: crosshair;
+  cursor: pointer;
 }
 
 body #projects #projectGrid .project a:nth-of-type(1) {
@@ -263,6 +338,8 @@ body #projects #projectGrid .project p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 body #projects #projectGrid .project .disabled {
@@ -275,12 +352,15 @@ body .hor-line-bot {
           transform: rotate(3deg);
   background: #f6f6f6;
   height: 175px;
-  margin-top: -90px;
+  margin-top: -150px;
   margin-right: -25px;
 }
 
 body #aboutDetail {
-  margin: 130px 0 125px 0;
+  margin: 100px 0 0 0;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
 }
 
 body #aboutDetail h2 {
@@ -303,6 +383,7 @@ body #aboutDetail p {
   max-width: 80%;
   margin: 0 auto;
   padding: 10px 0;
+  font-size: 1.25em;
 }
 
 body #aboutDetail p:last-of-type {
@@ -319,10 +400,27 @@ body #aboutDetail a {
   font-size: 1.2em;
   font-weight: 900;
   border-radius: 35px;
-  padding: 15px 50px;
+  padding: 15px 73.5px;
   background: #284b8e;
   color: #fff;
   text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  max-width: 150px;
+}
+
+body #aboutDetail a:last-of-type {
+  margin-top: 25px;
+}
+
+body #aboutDetail a:hover {
+  color: #fff;
+  background: #1A1A1A;
+  font-weight: 700;
+}
+
+body #aboutDetail .CV_lang {
+  opacity: 0;
 }
 
 body .hor-line-spec {
@@ -351,7 +449,7 @@ body #contact h2 {
   margin-bottom: 50px;
 }
 
-body #contact a {
+body #contact .specA {
   font-size: 1.5em;
   color: #fff;
   font-weight: normal;
@@ -360,17 +458,32 @@ body #contact a {
   background: #284b8e;
   border-radius: 35px;
   padding: 10px 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-body #contact i {
-  margin-top: 50px;
-  font-size: 2em;
-  color: #fff;
-  padding: 0 10px;
-}
-
-body #contact i:hover {
+body #contact .specA:hover {
   color: #284b8e;
+  background: #fff;
+  border: 1px solid #284b8e;
+  font-weight: 700;
+}
+
+body #contact a {
+  font-size: 2.5em;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #contact a :hover {
+  color: #284b8e;
+}
+
+body #contact a i {
+  margin-top: 75px;
 }
 
 body footer {
@@ -380,6 +493,7 @@ body footer {
 
 body footer p {
   padding: 35px 0;
+  font-size: 1.15em;
 }
 
 /* Tablet edition */
@@ -387,10 +501,12 @@ body footer p {
   body {
     /* Navigation */
     /* Projects */
+    /* Horizontal line bottom */
+    /* About */
   }
   body nav {
-    -ms-grid-columns: 100px 1fr 100px 100px 100px 1fr 100px;
-        grid-template-columns: 100px 1fr 100px 100px 100px 1fr 100px;
+    -ms-grid-columns: 150px 1fr 100px 100px 100px 1fr 150px;
+        grid-template-columns: 150px 1fr 100px 100px 100px 1fr 150px;
     justify-items: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -400,7 +516,8 @@ body footer p {
     -ms-grid-column: 1;
     grid-column: 1;
     padding: 15px 0;
-    margin-left: 50px;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   body nav a {
     background: #000;
@@ -418,31 +535,87 @@ body footer p {
     -ms-grid-column: 5;
     grid-column: 5;
   }
-  body nav a:last-of-type {
+  body nav a:nth-child(-n+5) {
+    border-bottom: none;
+    background: #000;
+  }
+  body nav :last-child {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  body nav .dropdown {
     -ms-grid-column: 7;
     grid-column: 7;
-    display: block;
-    margin-right: 50px;
-    white-space: nowrap;
-    border: 1px solid #fff;
-    border-radius: 35px;
-    padding: 5px 15px;
+    justify-items: start;
+  }
+  body nav .dropdown .dropdownContent {
+    margin-left: -150px;
+  }
+  body nav .dropdown .dropdownContent a {
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
   }
   body #projects #projectGrid {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  body #projects #projectGrid .project {
+    margin: 50px;
+  }
+  body .hor-line-bot {
+    margin-top: -90px;
+  }
+  body #aboutDetail {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 50px;
+            column-gap: 50px;
+    margin: 130px 0 120px 0;
+  }
+  body #aboutDetail h2, body #aboutDetail .line, body #aboutDetail p, body #aboutDetail #CV {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+  }
+  body #aboutDetail a:nth-of-type(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  body #aboutDetail a:nth-of-type(2) {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 5;
+    grid-row: 5;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  body #aboutDetail a:nth-of-type(3) {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 5;
+    grid-row: 5;
+    margin-top: 0;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
 }
 
 /* Laptop edition */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
   body {
     /* Landing section */
+    /* About */
     /* Projects */
+    /* Horizontal line spec */
+    /* About */
+    /* Contact */
   }
   body #landing {
     background: url("../img/landingWallpaper/landing_max.jpg");
-    background-position: 50% 60%;
+    background-position: 50% 58%;
     background-repeat: no-repeat;
     height: 60vh;
     display: -ms-grid;
@@ -451,11 +624,65 @@ body footer p {
         -ms-flex-align: center;
             align-items: center;
   }
+  body #landing div h1 {
+    font-size: 5em;
+    margin-top: -25px;
+  }
+  body #landing div h2 {
+    font-size: 2.5em;
+  }
+  body #about img {
+    height: 250px;
+    width: auto;
+  }
+  body #about h2 {
+    font-size: 3.5em;
+  }
+  body #about h3 {
+    font-size: 1.4em;
+  }
+  body #projects h2 {
+    font-size: 3em;
+  }
   body #projects #projectGrid {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     -webkit-column-gap: 25px;
             column-gap: 25px;
+  }
+  body #projects #projectGrid .project h3 {
+    font-size: 1.8em;
+  }
+  body #projects #projectGrid .project a {
+    font-size: 1.1em;
+  }
+  body #projects #projectGrid .project p {
+    font-size: 1.15em;
+    max-width: 100%;
+  }
+  body .hor-line-bot {
+    margin-top: -100px;
+  }
+  body #aboutDetail h2 {
+    font-size: 3em;
+  }
+  body #aboutDetail p {
+    font-size: 1.3em;
+  }
+  body #aboutDetail P:last-of-type {
+    margin-bottom: 100px;
+  }
+  body #aboutDetail a {
+    padding: 15px 72px;
+  }
+  body #contact h2 {
+    font-size: 3em;
+  }
+  body #contact .specA {
+    font-size: 1.5em;
+  }
+  body #contact a i {
+    font-size: 1.25em;
   }
 }
 /*# sourceMappingURL=style.css.map */

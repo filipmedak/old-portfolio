@@ -1,97 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://kit.fontawesome.com/636045b602.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/636045b602.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Montserrat&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Hello, my name is Filip Medak. I'm a web designer / multimedia student based in Zagreb, Croatia and this is my portfolio.">
+    <meta name="author" content="Filip Medak">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Filip,Medak,Filip Medak,Frontend,Web,Portfolio">
+    <meta name="msvalidate.01" content="067FF673977E5840891B1B5BCD253760" />  
+    <meta name="google-site-verification" content="pMeKNx3jFNk48Fgb7KHAZVJrdFNnTX0507BqBEOLVe4" />
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Montserrat|Odibee+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <title>Portfolio</title> 
+    <title>Portfolio - Filip Medak</title> 
+    
   </head>
 
   <body>
     <nav>
-      <i class="fas fa-robot"></i>
+      <i class="logoMain">{FM}</i>
       <i class="fas fa-bars" id="toggle"></i>
-      <a href="#" class="spec">Projects</a>
-      <a href="#" class="spec">About</a>
-      <a href="#" class="spec">Contact</a>
-      <i class="fab fa-github spec logo"></i>
-      <i class="fab fa-linkedin spec logo"></i>
-      <i class="fas fa-envelope spec logo"></i>
-      <i class="fas fa-phone-square-alt spec logo"></i>
-      <a href="#">Contact</a>
+      <a href="#projects" class="spec lang" key="PROJECTS"></a>
+      <a href="#aboutDetail" class="spec lang" key="ABOUT"></a>
+      <a href="#contact" class="spec lang" key="CONTACT"></a>
+      <a href="https://github.com/filipmedak?tab=repositories"><i class="fab fa-github spec logo"></i></a>
+      <a href="https://www.linkedin.com/in/filip-medak-748279183/"><i class="fab fa-linkedin spec logo"></i></a>
+      <a href="mailto:filip.medak213@gmail.com"><i class="fas fa-envelope spec logo"></i></a>
+      <a href="tel:+385916218715"><i class="fas fa-phone-square-alt spec logo"></i></a>
+      <div class="dropdown">
+        <i class="fas fa-globe-europe"></i>
+        <div class="dropdownContent">
+          <a class="translate lang" key="LANG1" id="en"></a>
+		      <a class="translate lang" key="LANG2" id="cro"></a>
+        </div>
+      </div>
     </nav>
 
     <div id="landing">
       <div>
-        <h1>I'm Filip.</h1>
-        <h2>a web designer</h2>
+        <h1 class="lang" key="LANDING1" data-aos="fade-right"></h1>
+        <h2 class="lang" key="LANDING2" data-aos="fade-left"></h2>
       </div>
     </div>
 
-    <div id="about">
+    <div id="about" data-aos="zoom-in">
       <img src="img/avatar/avatar.png">
-      <h2>Hello.</h2>
-      <h3>I'm a web developer/multimedia student based in Zagreb, Croatia.</h3>
+      <h2 class="lang" key="ABOUT1"></h2>
+      <h3 class="lang" key="ABOUT2"></h3>
     </div>
 
     <div class="hor-line-top"></div>
 
     <div id="projects">
-      <h2>Projects.</h2> 
+      <h2 class="lang" key="PROJECTS_TEXT"></h2> 
       <div class="line"></div>
       <div id="projectGrid">
         <div class="project">
           <img src="img/projectImg/realEstate.PNG">
-          <h3>Real Esate </h3>
-          <a href="#" class="disabled">Live</a>
-          <a href="#">Code</a>
-          <p>Real estate project created using PHP and mySQL.</p>
+          <h3 class="lang" key="PROJECT1_NAME"></h3>
+          <a href="http://filipmedak.com/projects/RealEstates/index.php" class="lang" key="LIVE_BUTTON"></a>
+          <a href="https://github.com/filipmedak/PHP_Projekt" class="lang" key="CODE_BUTTON"></a>
+          <p class="lang" key="PROJECT1_DESCRIPTION"></p>
         </div>
         <div class="project">
           <img src="img/projectImg/shift.PNG">
-          <h3>Shift</h3>
-          <a href="#">Live</a>
-          <a href="#">Code</a>
-          <p>Castlevania themed 2D platformer created in Construct2.</p>
+          <h3 class="lang" key="PROJECT2_NAME"></h3>
+          <a href="http://filipmedak.com/projects/Shift/index.html" class="lang" key="LIVE_BUTTON"></a>
+          <a href="https://github.com/filipmedak/Shift" class="lang" key="CODE_BUTTON"></a>
+          <p class="lang" key="PROJECT2_DESCRIPTION"></p>
         </div>
         <div class="project">
           <img src="img/projectImg/cityCafe.PNG">
-          <h3>Real Esate </h3>
-          <a href="#">Live</a>
-          <a href="#" class="disabled">Code</a>
-          <p>City Cafe promotional video.</p>
+          <h3 class="lang" key="PROJECT3_NAME"></h3>
+          <a href="https://www.youtube.com/watch?v=5PSM_Wea9cQ" class="lang" key="LIVE_BUTTON"></a>
+          <a href="#" class="disabled lang" key="CODE_BUTTON"></a>
+          <p class="lang" key="PROJECT3_DESCRIPTION"></p>
         </div>
       </div>
     </div>
 
     <div class="hor-line-bot"></div>
 
-    <div id="aboutDetail">
-      <h2>What I can do.</h2>
+    <div id="aboutDetail" data-aos="zoom-in">
+      <h2 class="lang" key="ABOUT_H2"></h2>
       <div class="line"></div>
-      <p>Create beautiful web sites using <span>HTML</span>, <span>CSS</span> & <span>JavaScript</span>.</p>
-      <p>I'm also familiar with <span>mySQL</span>, <span>Jquery</span>, <span>PHP</span>, <span>Scss</span> & <span>Bootstrap</span>.</p>
-      <a href="#">My CV</a>
+      <p class="lang" key="ABOUT_P1">Create beautiful web sites using <span>HTML</span>, <span>CSS</span> & <span>JavaScript</span>.</p>
+      <p class="lang" key="ABOUT_P2">I'm also familiar with <span>mySQL</span>, <span>Jquery</span>, <span>PHP</span>, <span>SCSS</span> & <span>Bootstrap</span>.</p>
+      <a class="lang" id="CV" key="ABOUT_CV"></a>
+      <a class="lang CV_lang" href="#" key="CV_LANG1"></a>
+      <a class="lang CV_lang" href="#" key="CV_LANG2"></a>
     </div>
 
     <div class="hor-line-spec"></div>
 
     <div id="contact">
-      <h2>Let's Work Together.</h2>
-      <a href="#">Get in touch.</a><br>
-      <i class="fab fa-github"></i>
-      <i class="fab fa-linkedin"></i>
-      <i class="fas fa-envelope"></i>
-      <i class="fas fa-phone-square-alt"></i>
+      <h2 class="lang" key="CONTACT_H2"></h2>
+      <a href="mailto:filip.medak213@gmail.com" class="specA lang" key="CONTACT_A"></a><br>
+      <a href="https://github.com/filipmedak?tab=repositories"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/filip-medak-748279183/"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:filip.medak213@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+385916218715"><i class="fas fa-phone-square-alt"></i></a>
     </div>
 
     <footer>
-      <p>© 2020 Filip Medak. All rights reserved.</p>
+      <p class="lang" key="FOOTER_P"></p>
     </footer>
+
+    <script src="js/languages.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000
+      });
+    </script>
 
   </body>
 </html>
