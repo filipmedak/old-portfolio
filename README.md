@@ -1,3 +1,3 @@
-# Portfolio_V2
+# Portfolio
  New redesigned personal portfolio.
-live at: https://www.filipmedak.com/
+https://www.filipmedak.com/
