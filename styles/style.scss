@@ -265,7 +265,7 @@ body{
                 padding: 30px 0;
                 max-width: 350px;
                 transition: 0.5s;
-                border: 2px solid transparent;
+                border: 2px solid transpare75;
                 border-radius: 35px;
 
                 img{
@@ -344,6 +344,10 @@ body{
             margin: 0 auto;
             margin-top: 10px;
             margin-bottom: 25px;
+        }
+
+        #CV, a{
+            cursor: pointer;
         }
 
         p{
@@ -693,6 +697,20 @@ body{
                 i{
                     font-size: 1.25em;
                 }
+            }
+        }
+    }
+}
+
+/* Laptop edition */
+@media only screen and (min-width: 1800px) {
+    body{
+        /* Projects */
+        #projects{
+
+            #projectGrid{
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                column-gap: 25px;
             }
         }
     }

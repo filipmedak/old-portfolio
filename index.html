@@ -20,25 +20,27 @@
   </head>
 
   <body>
-    <nav>
-      <i class="logoMain">{FM}</i>
-      <i class="fas fa-bars" id="toggle"></i>
-      <a href="#projects" class="spec lang" key="PROJECTS"></a>
-      <a href="#aboutDetail" class="spec lang" key="ABOUT"></a>
-      <a href="#contact" class="spec lang" key="CONTACT"></a>
-      <a href="https://github.com/filipmedak?tab=repositories"><i class="fab fa-github spec logo"></i></a>
-      <a href="https://www.linkedin.com/in/filip-medak-748279183/"><i class="fab fa-linkedin spec logo"></i></a>
-      <a href="mailto:filip.medak213@gmail.com"><i class="fas fa-envelope spec logo"></i></a>
-      <a href="tel:+385916218715"><i class="fas fa-phone-square-alt spec logo"></i></a>
-      <div class="dropdown">
-        <i class="fas fa-globe-europe"></i>
-        <div class="dropdownContent">
-          <a class="translate lang" key="LANG1" id="en"></a>
-		      <a class="translate lang" key="LANG2" id="cro"></a>
+    <header>
+      <nav>
+        <i class="logoMain">{FM}</i>
+        <i class="fas fa-bars" id="toggle"></i>
+        <a href="#projects" class="spec lang" key="PROJECTS"></a>
+        <a href="#aboutDetail" class="spec lang" key="ABOUT"></a>
+        <a href="#contact" class="spec lang" key="CONTACT"></a>
+        <a href="https://github.com/filipmedak?tab=repositories"><i class="fab fa-github spec logo"></i></a>
+        <a href="https://www.linkedin.com/in/filip-medak-748279183/"><i class="fab fa-linkedin spec logo"></i></a>
+        <a href="mailto:filip.medak213@gmail.com"><i class="fas fa-envelope spec logo"></i></a>
+        <a href="tel:+385916218715"><i class="fas fa-phone-square-alt spec logo"></i></a>
+        <div class="dropdown">
+          <i class="fas fa-globe-europe"></i>
+          <div class="dropdownContent">
+            <a class="translate lang" key="LANG1" id="en"></a>
+            <a class="translate lang" key="LANG2" id="cro"></a>
+          </div>
         </div>
-      </div>
-    </nav>
-
+      </nav>
+    </header>
+    
     <div id="landing">
       <div>
         <h1 class="lang" key="LANDING1" data-aos="fade-right"></h1>
@@ -79,6 +81,13 @@
           <a href="#" class="disabled lang" key="CODE_BUTTON"></a>
           <p class="lang" key="PROJECT3_DESCRIPTION"></p>
         </div>
+        <div class="project">
+          <img src="img/projectImg/velociraptor.png" class="velociraptor">
+          <h3 class="lang" key="PROJECT4_NAME"></h3>
+          <a href="https://www.artstation.com/artwork/YeLe0d" class="lang" key="LIVE_BUTTON"></a>
+          <a href="#" class="disabled lang" key="CODE_BUTTON"></a>
+          <p class="lang" key="PROJECT4_DESCRIPTION"></p>
+        </div>
       </div>
     </div>
 
@@ -90,8 +99,8 @@
       <p class="lang" key="ABOUT_P1">Create beautiful web sites using <span>HTML</span>, <span>CSS</span> & <span>JavaScript</span>.</p>
       <p class="lang" key="ABOUT_P2">I'm also familiar with <span>mySQL</span>, <span>Jquery</span>, <span>PHP</span>, <span>SCSS</span> & <span>Bootstrap</span>.</p>
       <a class="lang" id="CV" key="ABOUT_CV"></a>
-      <a class="lang CV_lang" href="#" key="CV_LANG1"></a>
-      <a class="lang CV_lang" href="#" key="CV_LANG2"></a>
+      <a class="lang CV_lang" id="CV_ENG" key="CV_LANG1"></a>
+      <a class="lang CV_lang" id="CV_CRO" key="CV_LANG2"></a>
     </div>
 
     <div class="hor-line-spec"></div>

@@ -290,7 +290,7 @@ body #projects #projectGrid .project {
   max-width: 350px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  border: 2px solid transparent;
+  border: 2px solid transpare75;
   border-radius: 35px;
 }
 
@@ -377,6 +377,10 @@ body #aboutDetail .line {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 25px;
+}
+
+body #aboutDetail #CV, body #aboutDetail a {
+  cursor: pointer;
 }
 
 body #aboutDetail p {
@@ -683,6 +687,19 @@ body footer p {
   }
   body #contact a i {
     font-size: 1.25em;
+  }
+}
+
+/* Laptop edition */
+@media only screen and (min-width: 1800px) {
+  body {
+    /* Projects */
+  }
+  body #projects #projectGrid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */

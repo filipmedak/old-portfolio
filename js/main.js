@@ -52,6 +52,8 @@ $(function(){
     $('#CV').click(function(){
         $(this).css({display: 'none'});
         $('#aboutDetail').css({marginBottom: '120px'});
+        $('#CV_ENG').attr("href", "additionalFiles/CV-FilipMedak.pdf");
+        $('#CV_CRO').attr("href", "additionalFiles/Životopis-FilipMedak.pdf");
 
         $('.CV_lang').animate({
             opacity: 1

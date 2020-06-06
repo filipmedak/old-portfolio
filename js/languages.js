@@ -25,6 +25,8 @@ let arrLang = {
         "PROJECT2_DESCRIPTION" : "Castlevania themed 2D platformer created in Construct2 for PC.",
         "PROJECT3_NAME" : "City Cafe",
         "PROJECT3_DESCRIPTION" : "Promotional video created for social media for City Cafe.",
+        "PROJECT4_NAME" : "3D Velicoraptor",
+        "PROJECT4_DESCRIPTION" : "3D Velociraptor model created using Zbrush and Keyshot.",
 
         /* About text */
         "ABOUT_H2" : "What I can do.",
@@ -67,6 +69,8 @@ let arrLang = {
         "PROJECT2_DESCRIPTION" : "2D platformer na temu Castlevanie kreiran u Constructu 2 za PC.",
         "PROJECT3_NAME" : "City Cafe",
         "PROJECT3_DESCRIPTION" : "Promotivni video za društvene mreže za City Cafe.",
+        "PROJECT4_NAME" : "Velicoraptor",
+        "PROJECT4_DESCRIPTION" : "3D model Velociraptora kreiran koristeći Zbrush i KeyShot.",
         
         /* About text */
         "ABOUT_H2" : "Što mogu?",
