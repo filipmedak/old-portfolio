@@ -49,15 +49,23 @@ $(function(){
     });
 
     //CV chose language
+    $('.CV_lang').hide();
+
     $('#CV').click(function(){
         $(this).css({display: 'none'});
         $('#aboutDetail').css({marginBottom: '120px'});
         $('#CV_ENG').attr("href", "additionalFiles/CV-FilipMedak.pdf");
         $('#CV_CRO').attr("href", "additionalFiles/Životopis-FilipMedak.pdf");
 
+        $('.CV_lang').show();
         $('.CV_lang').animate({
             opacity: 1
         }, 100);
+    });
+
+    //Reset scroll on page refresh
+    $(document).ready(function(){
+        $(this).scrollTop(0);
     });
 });
 

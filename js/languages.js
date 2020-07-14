@@ -8,12 +8,13 @@ let arrLang = {
         "LANG2" : "Croatian",
 
         /* Landing text */
-        "LANDING1" : "I'm Filip.",
-        "LANDING2" : "a web designer",
+        // "LANDING1" : "I'm Filip.",
+        // "LANDING2" : "a web designer",
 
         /* About text */
-        "ABOUT1" : "Hello.",
-        "ABOUT2" : "I'm a web designer / multimedia student based in Zagreb, Croatia.",
+        "ABOUT1" : "Hi. I'm Filip. ",
+        "ABOUT2" : "{ web developer / designer }",
+        "ABOUT3" : "based in Zagreb, Croatia.",
 
         /* Projects text */
         "PROJECTS_TEXT" : "Projects.",
@@ -30,8 +31,10 @@ let arrLang = {
 
         /* About text */
         "ABOUT_H2" : "What I can do.",
-        // "ABOUT_P1" : "",
-        // "ABOUT_P2" : "",
+        "ABOUT_P1" : "Create beautiful web sites using",
+        "ABOUT_P2" : "HTML, CSS & JavaScript.",
+        "ABOUT_P3" : "I'm also familiar with",
+        "ABOUT_P4" : "React, mySQL, PHP, SCSS & Bootstrap.",
         "ABOUT_CV" : "MY CV",
         "CV_LANG1" : "ENG",
         "CV_LANG2" : "CRO",
@@ -52,12 +55,13 @@ let arrLang = {
         "LANG2" : "Hrvatski",
 
         /* Landing text */
-        "LANDING1" : "Ja sam Filip.",
-        "LANDING2" : "web dizajner",
+        // "LANDING1" : "Ja sam Filip.",
+        // "LANDING2" : "web dizajner",
         
         /* About text */
-        "ABOUT1" : "Pozdrav.",
-        "ABOUT2" : "Ja sam web dizajner / student multimedijskog računarstva u Zagrebu, Hrvatskoj.",
+        "ABOUT1" : "Bok. Ja sam Filip.",
+        "ABOUT2" : "{ web developer / dizajner }",
+        "ABOUT3" : "baziran u Zagrebu, Hrvatska.",
         
         /* Projects text */
         "PROJECTS_TEXT" : "Projekti.",
@@ -74,8 +78,10 @@ let arrLang = {
         
         /* About text */
         "ABOUT_H2" : "Što mogu?",
-        "ABOUT_P1" : "Kreirati privlače web stranice koristeći HTML, CSS & JavaScript.",
-        "ABOUT_P2" : "Također sam upoznat sa mySQL-om, Jquery-em, PHP-om, SCSS-om & Bootstrap-om.",
+        "ABOUT_P1" : "Kreirati privlačne web stranice i aplikacije koristeći",
+        "ABOUT_P2" : "HTML, CSS i JavaScript.",
+        "ABOUT_P3" : "Također sam upoznat sa",
+        "ABOUT_P4" : "React-om, mySQL-om, PHP-om, SCSS-om i Bootstrap-om.",
         "ABOUT_CV" : "ŽIVOTOPIS",
         "CV_LANG1" : "ENG",
         "CV_LANG2" : "HRV",

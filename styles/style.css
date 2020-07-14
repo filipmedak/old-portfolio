@@ -59,6 +59,10 @@ body {
   /* Footer */
 }
 
+body .animate {
+  width: 100px;
+}
+
 body nav {
   display: -ms-grid;
   display: grid;
@@ -198,11 +202,11 @@ body #landing div h2 {
 }
 
 body #about {
-  margin: 25px auto 100px auto;
+  margin: 125px auto 100px auto;
 }
 
 body #about img {
-  margin-top: 50px;
+  margin: 50px auto 30px auto;
   height: 200px;
   width: auto;
 }
@@ -216,10 +220,16 @@ body #about h2 {
 
 body #about h3 {
   font-weight: normal;
-  font-size: 1.25em;
+  font-size: 1.5em;
   width: 80%;
   margin: 0 auto;
   margin-top: 15px;
+}
+
+body #about .boldLang {
+  font-weight: bolder;
+  font-size: 1.75em;
+  margin-bottom: 25px;
 }
 
 body .hor-line-top {
@@ -357,10 +367,7 @@ body .hor-line-bot {
 }
 
 body #aboutDetail {
-  margin: 100px 0 0 0;
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
+  margin: 100px 25px 0 25px;
 }
 
 body #aboutDetail h2 {
@@ -376,7 +383,15 @@ body #aboutDetail .line {
   width: 100px;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+}
+
+body #aboutDetail .spacing {
+  margin-bottom: 50px;
+}
+
+body #aboutDetail #CV {
+  margin-top: 50px;
 }
 
 body #aboutDetail #CV, body #aboutDetail a {
@@ -388,6 +403,16 @@ body #aboutDetail p {
   margin: 0 auto;
   padding: 10px 0;
   font-size: 1.25em;
+}
+
+body #aboutDetail .inline {
+  display: inline;
+}
+
+body #aboutDetail .inlineSpec {
+  display: inline;
+  font-weight: 700;
+  color: #284b8e;
 }
 
 body #aboutDetail p:last-of-type {
@@ -433,13 +458,12 @@ body .hor-line-spec {
           transform: rotate(3deg);
   background: #1A1A1A;
   height: 175px;
-  margin-bottom: -85px;
-  margin-left: -50px;
+  margin: 125px auto -85px -50px;
 }
 
 body #contact {
   background: #1A1A1A;
-  padding: 50px 0 100px 0;
+  padding: 75px 0 125px 0;
   z-index: 10000;
   position: relative;
 }
@@ -496,7 +520,7 @@ body footer {
 }
 
 body footer p {
-  padding: 35px 0;
+  padding: 60px 0;
   font-size: 1.15em;
 }
 
@@ -570,11 +594,7 @@ body footer p {
     margin-top: -90px;
   }
   body #aboutDetail {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 50px;
-            column-gap: 50px;
-    margin: 130px 0 120px 0;
+    margin: 170px 0 160px 0;
   }
   body #aboutDetail h2, body #aboutDetail .line, body #aboutDetail p, body #aboutDetail #CV {
     -ms-grid-column: 1;
@@ -604,6 +624,12 @@ body footer p {
     margin-top: 0;
     -ms-grid-column-align: start;
         justify-self: start;
+  }
+  body #aboutDetail #blocker {
+    display: none;
+  }
+  body #aboutDetail #CV_ENG {
+    margin-right: 75px;
   }
 }
 
@@ -640,10 +666,16 @@ body footer p {
     width: auto;
   }
   body #about h2 {
-    font-size: 3.5em;
+    font-size: 3.75em;
   }
   body #about h3 {
-    font-size: 1.4em;
+    font-size: 1.75em;
+  }
+  body #about h3:last-of-type {
+    padding-bottom: 25px;
+  }
+  body #about .boldLang {
+    font-size: 2em;
   }
   body #projects h2 {
     font-size: 3em;
@@ -662,7 +694,7 @@ body footer p {
   }
   body #projects #projectGrid .project p {
     font-size: 1.15em;
-    max-width: 100%;
+    max-width: 90%;
   }
   body .hor-line-bot {
     margin-top: -100px;
@@ -674,7 +706,7 @@ body footer p {
     font-size: 1.3em;
   }
   body #aboutDetail P:last-of-type {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   body #aboutDetail a {
     padding: 15px 72px;
